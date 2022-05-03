@@ -31,6 +31,7 @@ def incrementar_stock(cantidad: int, nombre: str) -> None:
 
 
 def procesar_egreso() -> None:
+    # TODO refactor
     nombre = ''
     while nombre != "fin":
         print('-------------EGRESO-------------')
