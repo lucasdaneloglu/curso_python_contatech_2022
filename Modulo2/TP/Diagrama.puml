@@ -1,0 +1,29 @@
+@startuml
+
+class Deposito {
+'    - stock: Botella[] equivalente a la flecha
+    - balance: float
+    + ingreso(gaseosas: Botella[]): None
+    + egreso(gaseosas: Botella[]): None
+    + cierre_mensual(): None
+}
+
+class Botella {
+    - precio: float
+    - variedad: string
+    - validar_variedad(variedad: str): boolean
+    - set_variedad(variedad: str): None
+    + precio(): float
+}
+
+class Viaje {
+    - tipo: string
+    - fecha: string
+    + calcular_precio_total(): float
+}
+
+Deposito -->"*" Botella: - stock
+Deposito -left->"*" Viaje: - viajes
+Viaje -->"*" Botella: - botellas
+
+@enduml

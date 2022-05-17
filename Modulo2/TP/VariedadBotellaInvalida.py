@@ -1,0 +1,2 @@
+class VariedadBotellaInvalida(Exception):
+    pass
