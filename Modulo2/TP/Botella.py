@@ -13,11 +13,13 @@ class Botella:
 
     # setter
     def __set_variedad(self, variedad: str) -> None:
-        if self.__es_valida_variedad(variedad):
-            self.__variedad = variedad
-        else:
+        if not self.__es_valida_variedad(variedad):
             raise VariedadBotellaInvalida(f"La variedad {variedad} no es válida.")
+        self.__variedad = variedad
 
     # getter
     def precio(self):
         return self.__precio
+
+    def __str__(self):
+        return f'Botella({self.__variedad}, {self.__precio})'

@@ -1,0 +1,2 @@
+class TipoViajeInvalido(Exception):
+    pass

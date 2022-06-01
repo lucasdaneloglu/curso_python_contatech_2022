@@ -1,17 +1,23 @@
 @startuml
 
 class Deposito {
-'    - stock: Botella[] equivalente a la flecha
-    - balance: float
+    - viajes: Viaje[]
+    - stock: Botella[]
+    - ingresos: int
+    - egresos: int
     + ingreso(gaseosas: Botella[]): None
     + egreso(gaseosas: Botella[]): None
     + cierre_mensual(): None
+    - mostrar_viajes(): None
+    - mostrar_stock(): None
+    - mostrar_balance(): None
+    - calcular_balance_viajes(): None
 }
 
 class Botella {
     - precio: float
     - variedad: string
-    - validar_variedad(variedad: str): boolean
+    - es_valida_variedad(variedad: str): boolean
     - set_variedad(variedad: str): None
     + precio(): float
 }
@@ -20,6 +26,8 @@ class Viaje {
     - tipo: string
     - fecha: string
     + calcular_precio_total(): float
+    - set_tipo(tipo: str) : None
+    - es_tipo_valido(tipo: str) : bool
 }
 
 Deposito -->"*" Botella: - stock
