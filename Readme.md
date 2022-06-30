@@ -8,5 +8,5 @@
 ### Participantes
 [Mauro](https://github.com/MauroCasti)
 [Fernando Burrone](https://github.com/ferburrone)
-\n[Lucas Daneloglu](https://github.com/lucasdaneloglu)
+[Lucas Daneloglu](https://github.com/lucasdaneloglu)
 
